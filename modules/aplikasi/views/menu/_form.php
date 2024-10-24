@@ -16,9 +16,9 @@ use app\modules\aplikasi\models\AppMenu;
 
     <?php
     if ($model->isNewRecord) {
-        $dataMenu = AppMenu::find()->select(['idMenu', 'CONCAT(if(parentId=0,idMenu,CONCAT(parentId,".",idMenu))," - ",labelMenu)AS labelMenu'])->orderBy('labelMenu')->all();
+        $dataMenu = AppMenu::find()->select(['idMenu', 'CONCAT(if(parentId=0,idMenu,CONCAT(parentId,".",idMenu))," - ",labelMenu) AS labelMenu'])->orderBy('labelMenu')->all();
     } else {
-        $dataMenu = AppMenu::find()->select(['idMenu', 'CONCAT(if(parentId=0,idMenu,CONCAT(parentId,".",idMenu))," - ",labelMenu)AS labelMenu'])->where('idMenu<>:id', [':id' => $model->idMenu])->orderBy('labelMenu')->all();
+        $dataMenu = AppMenu::find()->select(['idMenu', 'CONCAT(if(parentId=0,idMenu,CONCAT(parentId,".",idMenu))," - ",labelMenu) AS labelMenu'])->where('idMenu<>:id', [':id' => $model->idMenu])->orderBy('labelMenu')->all();
     }
     $form = ActiveForm::begin(['type' => ActiveForm::TYPE_VERTICAL]);
     

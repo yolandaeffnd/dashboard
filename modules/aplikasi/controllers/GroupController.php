@@ -113,7 +113,7 @@ class GroupController extends Controller {
             '(SELECT idGroup FROM app_group WHERE idGroup=:group LIMIT 1)AS idGroup',
             'IFNULL(CONCAT(app_menu.idMenu,".",actionFn),app_menu.idMenu) AS idAction',
             'CONCAT(if(parentId=0,app_menu.idMenu,CONCAT(parentId,".",app_menu.idMenu))) AS kode',
-            'if(parentId=0,app_menu.idMenu,app_menu.parentId)AS urut'
+            'if(parentId=0,app_menu.idMenu,app_menu.parentId) AS urut'
         ]);
         $queryMenu->join = [['LEFT JOIN', 'app_action', 'app_action.idMenu=app_menu.idMenu']];
         $queryMenu->params([':group' => $id]);
@@ -129,7 +129,7 @@ class GroupController extends Controller {
         //Akses Group
         $queryGroup = AppGroup::find();
         $queryGroup->select(['*',
-            '(SELECT GROUP_CONCAT(idGroupView) FROM app_group_view WHERE idGroup=:group)AS arrGroupView'
+            '(SELECT GROUP_CONCAT(idGroupView) FROM app_group_view WHERE idGroup=:group) AS arrGroupView'
         ]);
         $queryGroup->params([':group' => $id]);
         $dataProviderGroup = new ActiveDataProvider([
