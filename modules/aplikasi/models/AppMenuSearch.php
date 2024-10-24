@@ -45,8 +45,14 @@ class AppMenuSearch extends AppMenu
                 ->select([
                     '*',
                     'CONCAT(if(parentId=0,idMenu,CONCAT(parentId,".",idMenu))) AS kode',
-                    'if(parentId=0,idMenu,parentId)AS urut'
+                    'if(parentId=0,idMenu,parentId) AS urut'
                 ]);
+                // ->select([
+                //     '*',
+                //     'CONCAT(if(parentId=0,idMenu,CONCAT(parentId,".",idMenu))) AS kode',
+                //     'if(parentId=0,idMenu,parentId) AS urut'
+                // ]);
+
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query
