@@ -1,0 +1,146 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 29, 2016, 3:33:01 PM
+    Author     : Ade Priyanto
+*/
+.art-shapes
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+.art-object567354297-bo-mini{
+    display: block;
+    left: 1.5%;
+    /*margin-left: -5px !important;;*/
+    position: absolute;
+    top: 4px;
+    width: 34px;
+    height: 41px;
+    background-image: url('eofficeimgs/object567354297.png');
+    background-size: 33px;/* 50px;*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    border-radius:2px;
+    z-index: 2;
+}
+.art-object567354297-bo
+{
+    display: block;
+    left: 0.2%;
+    /*margin-left: -5px !important;;*/
+    position: absolute;
+    top: 3px;
+    width: 44px;
+    height: 44px;
+    background-image: url('eofficeimgs/object567354297.png');
+    background-size: 29px;/* 50px;*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    border-radius:50%;
+    z-index: 2
+}
+.art-headline-bo
+{
+    display: inline-block;
+    position: absolute;
+    min-width: 50px;
+    top: 5px;
+    /*left: 0%;*/
+    line-height: 100%;
+    margin-left: 35px !important;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    z-index: 101;
+}
+
+.art-headline-bo, 
+.art-headline-bo a, 
+.art-headline-bo a:link, 
+.art-headline-bo a:visited, 
+.art-headline-bo a:hover
+{
+    font-stretch: condensed;
+    font-size: 20px;
+    font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+    letter-spacing: 0px;
+    text-align: left;
+    text-shadow: 0.7px 0.7px 0px rgba(153, 153, 153, 0.8), 1.4px 1.4px 0px rgba(140, 140, 140, 0.8), 2.1px 2.1px 1px rgba(122, 122, 122, 0.5), 2.8px 2.8px 0px rgba(107, 107, 107, 0.5), 3.5px 3.5px 0px rgba(92, 92, 92, 0.48);
+    padding: 0;
+    margin: 0;
+    color: #F0F2F4 !important;
+    white-space: nowrap;
+    font-style: italic;
+}
+.art-slogan-bo
+{
+    display: inline-block;
+    position: absolute;
+    min-width: 50px;
+    top: 28px;
+    /*left: 10.09%;*/
+    line-height: 100%;
+    margin-left: 35px !important;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    z-index: 102;
+    white-space: nowrap;
+}
+.art-slogan-bo, 
+.art-slogan-bo a, 
+.art-slogan-bo a:link, 
+.art-slogan-bo a:visited, 
+.art-slogan-bo a:hover
+{
+    font-stretch: condensed;
+    font-size: 14px;
+    font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: none;
+    letter-spacing: 0px;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    /*color: #070809 !important;*/
+    color: #F0F2F4 !important;
+    white-space: nowrap;
+}
+
+/*BERITA HOME*/
+#berita{
+    padding: 0px;
+}
+#berita ul li{
+    background-image:url(eofficeimgs/list.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    margin-left: -30px;
+    color: black;
+    list-style: none;
+    border-bottom: solid 1px #cccccc;
+}
+#berita ul li a{
+    color: black;
+}
