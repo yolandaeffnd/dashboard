@@ -12,8 +12,8 @@ return [
 	'db' => [
 		'class' => 'yii\db\Connection',
 		'dsn' => 'mysql:host=localhost;port=3306;dbname=app_bin2',
-		'username' => 'root',
-		'password' => '',
+		'username' => 'admin',
+		'password' => 'password',
 		'charset' => 'utf8',
 	]
 ];

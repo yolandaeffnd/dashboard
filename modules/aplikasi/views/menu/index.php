@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'type' => 'button',
                     'title' => 'Tambah Menu',
                     'class' => 'btn btn-success',
-                    'onclick' => 'js:document.location="' . Url::to(['/aplikasi/menu/create']) . '";'
+                    'onclick' => 'js:document.location="' . Url::to(['/aplikasi/kategori/create']) . '";'
                 ]),
             ],
             '{toggleData}',

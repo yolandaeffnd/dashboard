@@ -6530,10 +6530,10 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "kartik-v/yii2-grid": 20,
-        "kartik-v/yii2-detail-view": 20,
         "kartik-v/yii2-builder": 20,
+        "kartik-v/yii2-detail-view": 20,
         "kartik-v/yii2-dialog": 20,
+        "kartik-v/yii2-grid": 20,
         "kartik-v/yii2-tabs-x": 20
     },
     "prefer-stable": false,
@@ -6541,6 +6541,6 @@
     "platform": {
         "php": ">=5.4.0"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
