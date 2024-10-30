@@ -7,6 +7,7 @@ use kartik\form\ActiveForm;
 use kartik\builder\Form;
 use app\modules\aplikasi\models\AppChart;
 use app\modules\aplikasi\models\AppMenu;
+use app\modules\aplikasi\models\AppKategori;
 use app\models\RefFakultas;
 
 /* @var $this yii\web\View */
@@ -24,7 +25,9 @@ use app\models\RefFakultas;
     // }
 
     
-    $dataMenu = AppMenu::find()->select(['idMenu', 'CONCAT(if(parentId=0,idMenu,CONCAT(parentId,".",idMenu))," - ",labelMenu) AS labelMenu'])->orderBy('labelMenu')->all();
+    // $dataMenu = AppMenu::find()->select(['idMenu', 'CONCAT(if(parentId=0,idMenu,CONCAT(parentId,".",idMenu))," - ",labelMenu) AS labelMenu'])->orderBy('labelMenu')->all();
+
+    $dataKategori = AppKategori::find()->select(['idKategori', 'nama_kategori'])->orderBy('nama_kategori')->all();
     
 
     $dataUnit = RefFakultas::find()->select(['fakId', 'fakNama'])->orderBy('fakNama')->all();
@@ -36,7 +39,7 @@ use app\models\RefFakultas;
         'columns' => 2,
         'attributes' => [
 
-            'idMenu' => ['type' => Form::INPUT_DROPDOWN_LIST, 'items' => ArrayHelper::map($dataMenu, 'idMenu', 'labelMenu'), 'options' => ['prompt' => '- Pilih Menu -']],
+            'idKategori' => ['type' => Form::INPUT_DROPDOWN_LIST, 'items' => ArrayHelper::map($dataKategori, 'idKategori', 'nama_kategori'), 'options' => ['prompt' => '- Pilih Kategori -']],
             'nama_chart' => ['type' => Form::INPUT_TEXT, 'options' => ['placeholder' => 'Nama Chart']],
             'url_chart' => ['type' => Form::INPUT_TEXT, 'options' => ['placeholder' => 'Url Chart']],
             'unitId' => ['type' => Form::INPUT_DROPDOWN_LIST, 'items' => ArrayHelper::map($dataUnit, 'fakId', 'fakNama'), 'options' => ['prompt' => '- Pilih Fakultas -']],

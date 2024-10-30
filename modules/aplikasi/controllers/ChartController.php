@@ -5,6 +5,7 @@ namespace app\modules\aplikasi\controllers;
 use Yii;
 use app\modules\aplikasi\models\AppChart;
 use app\modules\aplikasi\models\AppMenu;
+use app\modules\aplikasi\models\AppKategori;
 use app\modules\aplikasi\models\AppMenuSearch;
 use app\modules\aplikasi\models\AppAction;
 use app\models\RefFakultas;
@@ -56,18 +57,16 @@ class ChartController extends Controller {
             // 'app_menu.labelMenu AS labelMenu',
             // 'ref_fakultas.fakNama AS fakNama',
         ]);
-        // $query->join('JOIN', 'app_menu', 'app_menu.idMenu=app_chart.idMenu');
-        $query->orderBy('idMenu');
+       
+        $query->orderBy('idKategori');
         // $query->join('JOIN', 'ref_fakultas', 'ref_fakultas.fakId=app_chart.unitId');
         
         // $query->andWhere(['IN', 'app_user.idGroup', $availableGroup]);
         
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
-	    'key'=>'idChart'
+	        'key'=>'idChart'
         ]);
-
-
 
         return $this->render('index', [
                     'dataProvider' => $dataProvider,

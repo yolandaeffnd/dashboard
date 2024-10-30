@@ -4,6 +4,7 @@ use yii\helpers\Html;
 //use yii\grid\GridView;
 use kartik\grid\GridView;
 use yii\helpers\Url;
+use app\modules\aplikasi\models\AppKategori;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -35,12 +36,16 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'kartik\grid\SerialColumn'],
 //            'idMenu',
             [
-                'attribute'=>'idMenu',
+                'attribute'=>'idKategori',
                 'filter'=>true,
                 'group'=>true,
                 'groupedRow'=>true,
                 'value'=>function($data){
-                    return empty($data->idMenu0->idMenu)?null:$data->idMenu0->labelMenu;
+                    // $test = AppKategori::findone($data->idKategori);
+                    // var_dump($test);
+                    return empty($data->idKategori0->idKategori)?null:$data->idKategori0->nama_kategori;
+                    // return $data->nama_kategori;
+                    
                 }
             ],
             [

@@ -9,12 +9,14 @@ use Yii;
  *
  * @property integer $idAction
  * @property integer $idMenu
+ * @property integer $idKategori
  * @property string $actionFn
  * @property string $actionDesk
  */
 class AppChart extends \yii\db\ActiveRecord {
 
-    public $labelMenu;
+    // public $labelMenu;
+    public $nama_kategori;
 
     /**
      * @inheritdoc
@@ -28,8 +30,8 @@ class AppChart extends \yii\db\ActiveRecord {
      */
     public function rules() {
         return [
-            [['idMenu', 'nama_chart','url_chart','posisiChart'], 'required'],
-            [['idMenu'], 'integer'],
+            [['idKategori', 'nama_chart','url_chart','posisiChart'], 'required'],
+            [['idKategori'], 'integer'],
             [['unitId'], 'default', 'value' => null],
             [['posisiChart'], 'integer'],
             [['nama_chart'], 'string', 'max' => 255],
@@ -43,7 +45,7 @@ class AppChart extends \yii\db\ActiveRecord {
     public function attributeLabels() {
         return [
             'idChart' => 'Id Chart',
-            'idMenu' => 'Menu',
+            'idKategori' => 'Kategori',
             'nama_chart' => 'Nama Chart',
             'url_chart' => 'Url Chart',
             'unitId' => 'Unit',
@@ -55,8 +57,12 @@ class AppChart extends \yii\db\ActiveRecord {
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getIdMenu0() {
-        return $this->hasOne(AppMenu::className(), ['idMenu' => 'idMenu']);
+    // public function getIdMenu0() {
+    //     return $this->hasOne(AppMenu::className(), ['idMenu' => 'idMenu']);
+    // }
+
+    public function getIdKategori0() {
+        return $this->hasOne(AppKategori::className(), ['idKategori' => 'idKategori']);
     }
 
     public function getIdUnit0() {

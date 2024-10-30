@@ -49,7 +49,7 @@ class KategoriController extends Controller {
                 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
-        'key'=>'idKategori'
+            'key'=>'idKategori'
         ]);
 
 

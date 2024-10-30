@@ -45,7 +45,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ]
         ],
         'attributes' => [
-            'idMenu',
+            'idKategori',
             'nama_chart',
             'url_chart',
                 [
